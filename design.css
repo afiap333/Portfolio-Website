@@ -10,6 +10,7 @@ html, body {
     height: 100%;
     margin: 0;
     display: flex;
+    background-image: linear-gradient(to right, #084F54, #8a1919);
     flex-direction: column;
 }
 
@@ -23,10 +24,25 @@ h1 {
     color: white;
     text-align: center;
     font-family: 'Playfair Display', serif;
-    font-size: 5em;
+    font-size: 5rem;
     font-style: italic;
-    line-height: 1em;
+    line-height: 1;
     font-weight: 700;
+}
+
+.navigation {
+    flex-shrink: 0;
+    background-image: linear-gradient(to right, #084F54, #8a1919);
+    text-align: right;
+    padding: 1em;
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 10; /* Ensure the navigation bar stays on top */
 }
 
 /* Styles for .box1 h2 */
@@ -34,7 +50,7 @@ h1 {
     color: white;
     text-align: center;
     font-family: 'Lato', sans-serif;
-    font-size: 1.8em;
+    font-size: 1.8rem;
     font-weight: 700; 
 }
 
@@ -43,15 +59,17 @@ h1 {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    margin-top: 4em; /* Adjust margin to account for the fixed navbar */
 }
 
 /* Styles for .box1 */
 .box1 {
-    flex-grow: 1;
     display: flex;
+    height: 80vh;
     background-image: linear-gradient(to right, #084F54, #8a1919);
-    justify-content:space-between;
+    justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 /* Styles for .footer */
@@ -59,34 +77,38 @@ h1 {
     flex-shrink: 0;
     background-color: white;
     text-align: right;
-    height: 10%;
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-content: center;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    padding-bottom: 1rem;
 }
 
 .footer-links li {
-    padding-top: 1em;
+    padding-top: 1rem;
     display: inline-block;
-    margin-left: 3em;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .footer-links li a {
-    border: .1em solid #084F54;
-    border-radius: 3em;
+    border: .1rem solid #084F54;
+    border-radius: 3rem;
     display: block;
-    padding: 1em;
+    padding: 1rem;
     font-family: 'Lato', sans-serif;
     text-decoration: none;
     color: #084F54;
 }
 
 .footer-links li a:hover {
-    border: .1em solid #084F54;
-    border-radius: 3em;
+    border: .1rem solid #084F54;
+    border-radius: 3rem;
     display: block;
-    padding: 1em;
+    padding: 1rem;
     font-family: 'Lato', sans-serif;
     text-decoration: none;
     background-color: #084F54;
@@ -94,84 +116,65 @@ h1 {
 
 h4 {
     font-family: 'Playfair Display', serif;
-    font-size: 3em;
+    font-size: 3rem;
     color: #8A1919;
     font-style: italic;
-    line-height: 1em;
+    line-height: 1rem;
 }
 
 /* Styles for .box1 .section1 */
-.box1 .section1 .homeText {
-    margin-top: 0;
+.box1 .section1 {
     display: flex;
-    line-height: 2em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content horizontally */
+}
+
+.box1 .section1 .homeText {
+    margin: 0;
+    display: flex;
+    line-height: 2;
     flex-wrap: nowrap;
     height: max-content;
-    padding-left:0;
+    width:110vh;
+    padding-right: 1vh;
+    padding: auto;
     align-items: center;
     justify-content: center; /* Center content horizontally */
     flex-direction: column; /* Stack items vertically */
 }
 
 .childText {
+    padding-top: 0;
     max-width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.box1 .section1 {
-    margin-top: 0;
-    display: flex;
-    line-height: 2em;
-    flex-wrap: nowrap;
-    height: max-content;
-    align-items: center;
-}
-/* Styles for .box1 .section1 .lowerText */
-.box1 .section1 .lowerText {
-    color: white;
-    text-align: left;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5em;
-    line-height: 1.2em;
-    font-style: normal;
-    font-weight: 300;
-    width: 80%; 
-}
-
 
 #profilePic {
-    width: 70%;
-    height: 70%;
-}
-
-.navigation {
-    flex-shrink: 0;
-    background-image: linear-gradient(to right, #084F54, #8a1919);
-    text-align: right;
-    height: 7%;
-    padding: 3em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    height: 30vh;
+    justify-self: center;
 }
 
 .nav-links li {
     display: inline-block;
-    margin-left: 3em;
+    padding-left: 2em;
+    padding-right:2em;
 }
 
 .nav-links li a {
     border: .1em solid white;
     border-radius: 3em;
     display: block;
+    width: 15vh;
     padding-left: 2em;
     padding-right: 2em;
     padding-bottom: 1em;
     text-align: center;
     padding-top: 1em;
-    font-size: 1em;
+    font-size: 1rem;
     font-family: 'Lato', sans-serif;
     text-decoration: none;
     color: white;
@@ -186,7 +189,7 @@ h4 {
     padding-bottom: 1em;
     text-align: center;
     padding-top: 1em;
-    font-size: 1em;
+    font-size: 1rem;
     font-family: 'Lato', sans-serif;
     text-decoration: none;
     color: #8A1919;
@@ -197,7 +200,7 @@ h3 {
     color: white;
     text-align: center;
     font-family: 'Lato', sans-serif;
-    font-size: 3em;
+    font-size: 3rem;
     font-weight: 700; 
     font-style: italic;
 }
@@ -206,15 +209,14 @@ h3 {
     color: white;
     text-align: center;
     font-family: 'Playfair Display', serif;
-    font-size: 2.5em;
+    font-size: 1.5rem;
     font-style: italic;
     line-height: 0;
     font-weight: 700;
-    padding-left: 1.5em;
+    padding-left: .5rem;
     align-self: center;
 }
 
 #gmail, #linkedIn, #github {
-    width: 2em;
-    height: 2em;
+    width: 1.4rem;
 }
