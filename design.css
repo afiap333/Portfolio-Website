@@ -92,6 +92,7 @@ h1 {
     display: inline-block;
     padding-left: 1rem;
     padding-right: 1rem;
+    padding-bottom: 1rem;
 }
 
 .footer-links li a {
@@ -117,7 +118,7 @@ h1 {
 h4 {
     font-family: 'Playfair Display', serif;
     font-size: 3rem;
-    color: #8A1919;
+    color: #white;
     font-style: italic;
     line-height: 1rem;
 }
@@ -162,6 +163,7 @@ h4 {
     display: inline-block;
     padding-left: 2em;
     padding-right:2em;
+    padding-top:1em;
 }
 
 .nav-links li a {
@@ -200,8 +202,9 @@ h3 {
     color: white;
     text-align: center;
     font-family: 'Lato', sans-serif;
-    font-size: 3rem;
-    font-weight: 700; 
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1; 
     font-style: italic;
 }
 
@@ -219,4 +222,93 @@ h3 {
 
 #gmail, #linkedIn, #github {
     width: 1.4rem;
+}
+
+.box2 {
+    display: flex;
+    flex-direction: column;
+    height: 80vh; /* Ensures box2 has a fixed height */
+    background-image: linear-gradient(to right, #084F54, #8a1919);
+    justify-content: center;
+    align-items: center;
+    margin:1;
+    padding-top:10%;
+    padding-bottom:10%;
+    overflow-y: auto; /* Enables vertical scrolling */
+}
+
+.box2 .section1 {
+    padding-top:80vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /* Center content horizontally */
+}
+
+.box2 .section1 a {
+    color: white;
+    font-size: 1rem;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+}
+
+.box2 .section1 .ImageLeft {
+    padding-top:10%;
+    align-items: center;
+    justify-content: center;
+}
+
+.box2 .section1 .ImageLeft h3 {
+    size: 1rem;
+}
+
+h4 {
+    color: white;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 1;
+    font-weight: 700;
+    padding-left: .5rem;
+    align-self: center;
+}
+
+.box2 .section1 .intro-text {
+    width: 40%;
+    padding-top:10%;
+    size: 1.5rem;
+    font-size: 1rem;
+    font-family: 'Lato', sans-serif;
+    color: white;
+}
+
+.box2 .resume {
+    padding-top: 2rem;
+}
+
+details {
+    border: 1px solid white;
+    border-radius: 40px;
+    padding: 50px 20px;
+    font-family: "Lato", san-serif;
+    background-color: #8A1919;
+    margin: 50px;
+    width: 60vw;
+}
+
+details:not([open]):hover,
+details:not([open]):focus {
+    color: #8A1919;
+    border-radius: 40px;
+    background: white;
+    width: 60vw;
+}
+
+details[open] {
+    border: 1px solid #BEE3DB;
+    border-radius: 40px;
+    width: 60vw;
+    background-color: #BEE3DB;
+    color: #084F54;
 }
