@@ -227,16 +227,31 @@ h3 {
 .box2 {
     display: flex;
     flex-direction: column;
-    height: 80vh; /* Ensures box2 has a fixed height */
+    height: 80%; /* Ensures box2 has a fixed height */
     background-image: linear-gradient(to right, #084F54, #8a1919);
     justify-content: center;
     align-items: center;
-    margin:1;
-    padding-top:2vh;
-    padding-bottom:1vh;
-    overflow-y: auto; /* Enables vertical scrolling */
+    margin:2vh;
+    padding-top:5vh;
+    padding-bottom:5vh;
 }
-
+.download{
+    padding-bottom: 1vh;
+    padding-top:1vh;
+    border-radius: 1vh;
+    border-color: white;
+}
+.download a:hover {
+    border: .1rem solid white;
+    border-radius: 3rem;
+    text-align: center;
+    padding-top: 1rem;
+    font-size: 1rem;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    color: #8A1919;
+    background-color: white;
+}
 .box2 .section1 {
     padding-top:1vh;
     display: flex;
@@ -318,7 +333,7 @@ details[open]>summary{
     color: #8A1919;
 }
 details[open] {
-    padding-bottom: 1rem;
+    padding-bottom: 3rem;
     border: none;
     border-radius: 40px;
     width: 60vw;
@@ -334,5 +349,17 @@ details[open] {
 .info{
     padding-left:1rem;
    padding-right:1rem;
+}
+.row{
+    display: flex;
+    flex-direction:row;
+    justify-content: flex-start;
+    padding: 3rem;
+    gap:2rem;
+}
+.projectBox{
+    background:white;
+    padding:3rem;
+    border-radius: 1rem;
 }
 
