@@ -1,66 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="design.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Afia Paracha</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="pages.css">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&family=Hedvig+Letters+Serif:opsz@12..24&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
-    <title>Afia Paracha</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&family=Hedvig+Letters+Serif:opsz@12..24&display=swap"
+      rel="stylesheet"
+    >
 </head>
-<body>
-<div class="content">
-    <nav class="nav">
-         <div class="navImage">
-                <img src="AP_Logo.png" id="profilePic" alt="AP logo">
-            </div>
-        <ul class="nav-links">
-            <li><a class="nav-btn" href="index.html">Home</a></li>
-            <li><a class="nav-btn" href="projects.html">Projects</a></li>
-            <li><a class="nav-btn" href="resume.html" target="_blank" rel="noopener">Resume</a></li>
-            <li><a class="nav-btn" href="about.html">About Me</a></li>
-        </ul>
-    </nav>
- <section id="intro">
-    <div class="intro-content">
-        <!-- Image column -->
-        <div class="intro-image">
-            <img
-                src="Headshot.jpg"
-                alt="Headshot of Afia Paracha"
-                class="headshot"
-            >
-        </div>
-        <!-- Text + buttons column -->
-        <div class="intro-text">
-            <h1>Hi! I'm Afia.</h1>
-            <h3 class="variant">Designer and developer. All in one.</h3>
-            <div class="intro-actions">
-                <a class="btn btn--filled" href="mailto:afiap333@gmail.com">
-                    Contact
-                </a>
-                <a
-                    class="btn btn--outline"
-                    href="resume.html"
-                    target="_blank"
-                    rel="noopener"
-                >
-                    View resume
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
 
-    <div class="footer">
+<body>
+  <div class="content">
+
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="navImage">
+        <img src="AP_Logo.png" alt="AP logo">
+      </div>
+
+      <ul class="nav-links">
+        <li><a class="nav-btn" href="index.html" aria-current="page">Home</a></li>
+        <li><a class="nav-btn" href="projects.html">Projects</a></li>
+        <li><a class="nav-btn" href="resume.html" target="_blank" rel="noopener">Resume</a></li>
+        <li><a class="nav-btn" href="about.html">About Me</a></li>
+      </ul>
+    </nav>
+
+    <!-- Intro Section -->
+    <section id="intro">
+      <div class="intro-content">
+
+        <!-- Image -->
+        <div class="intro-image">
+          <img
+            src="Headshot.jpg"
+            alt="Headshot of Afia Paracha"
+            class="headshot"
+            loading="lazy"
+          >
+        </div>
+
+        <!-- Text + Buttons -->
+        <div class="intro-text">
+          <h1>Hi! I'm Afia.</h1>
+          <h3>Designer and developer. All in one.</h3>
+
+          <div class="intro-actions">
+            <a class="btn btn--filled" href="mailto:afiap333@gmail.com">
+              Contact
+            </a>
+            <a
+              class="btn btn--outline"
+              href="resume.html"
+              target="_blank"
+              rel="noopener"
+            >
+              View resume
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="project-section">
+        <article class="project-card">
+            <!-- Image -->
+            <div class="project-card-image">
+                <img src="art-library.png" alt="Art Library Screenshot">
+            </div>
+
+            <!-- Text body -->
+            <div class="project-card-body">
+                <h5>Art Library</h5>
+                <p>
+                As testing manager, in addition to developing the Art Library web page, I developed software tests and led beta testing.
+                </p>
+                <a href="project-link.html" class="btn btn--outline">View full page →</a>
+            </div>
+        </article>
+
+        </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div>
+            <p><i>Let's connect</i></p>
+        </div>
+      <div>
         <ul class="footer-links">
-            <li><a href="mailto:afiap333@gmail.com"><img src="gmail-icon.svg" alt="Gmail Icon" id="gmail"></a></li>
-            <li><a href="https://linkedin.com/in/afia-paracha"><img src="linkedin-icon-2.svg" alt="LinkedIn Icon" id="linkedIn"></a></li>
-            <li><a href="https://github.com/afiap333"><img src="github-icon-1.svg" alt="GitHub Icon" id="github"></a></li>
+            <li>
+            <a href="mailto:afiap333@gmail.com">
+                <img src="gmail-icon.svg" alt="Email Afia">
+            </a>
+            </li>
+            <li>
+            <a href="https://linkedin.com/in/afia-paracha">
+                <img src="linkedin-icon-2.svg" alt="Afia on LinkedIn">
+            </a>
+            </li>
+            <li>
+            <a href="https://github.com/afiap333">
+                <img src="github-icon-1.svg" alt="Afia on GitHub">
+            </a>
+            </li>
         </ul>
-    </div>
-</div>
+       </div>
+    </footer>
+
+  </div>
 </body>
 </html>

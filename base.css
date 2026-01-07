@@ -1,0 +1,69 @@
+:root {
+  /* Base / background */
+  --color-bg: #efd5d2;
+  --color-cards: #2e4052;
+
+  /* Text */
+  --color-text-main: #7e1946;
+  --color-text-muted: #efd6d2;
+  --color-accent: #2e4052;
+  --color-border: rgba(46, 64, 82, 0.15);
+
+  /* Fonts */
+  --font-heading: 'Hedvig Letters Serif', serif;
+  --font-body: 'Hedvig Letters Sans', sans-serif;
+
+  /* Buttons */
+  --btn-radius: 8px;
+  --btn-padding-y: 0.5rem;
+  --btn-padding-x: 1rem;
+  --btn-transition: 180ms ease;
+
+  /* Nav */
+  --nav-padding: 0.5rem 1rem;
+  --nav-gap: 0.5rem;
+  --nav-item-radius: 8px;
+  --nav-transition: 160ms ease;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  font-family: var(--font-body);
+}
+
+/* Typography */
+h1 {
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  color: var(--color-text-main);
+  margin: 0;
+}
+
+h2 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--color-text-main);
+  margin: 0;
+}
+
+h3 {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  color: var(--color-accent);
+  margin: 0;
+}
+
+h3.variant {
+  color: var(--color-text-main);
+}
+
+p {
+  margin: 0;
+  color: var(--color-accent);
+}
+
+p.light,
+h2.light {
+  color: var(--color-text-muted);
+}
