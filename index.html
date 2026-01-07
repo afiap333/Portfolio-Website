@@ -21,76 +21,97 @@
 </head>
 
 <body>
-  <div class="content">
-
-    <!-- Navigation -->
     <nav class="nav">
-      <div class="navImage">
+    <div class="content nav-content">
+        <div class="navImage">
         <img src="AP_Logo.png" alt="AP logo">
-      </div>
+        </div>
 
-      <ul class="nav-links">
+        <ul class="nav-links">
         <li><a class="nav-btn" href="index.html" aria-current="page">Home</a></li>
         <li><a class="nav-btn" href="projects.html">Projects</a></li>
-        <li><a class="nav-btn" href="resume.html" target="_blank" rel="noopener">Resume</a></li>
+        <li><a class="nav-btn" href="resume.html" target="_blank">Resume</a></li>
         <li><a class="nav-btn" href="about.html">About Me</a></li>
-      </ul>
+        </ul>
+    </div>
     </nav>
 
-    <!-- Intro Section -->
-    <section id="intro">
-      <div class="intro-content">
+<section id="intro" class="section section--light">
+  <div class="content intro-content">
+    <div class="intro-image">
+      <img src="Headshot.jpg" alt="Headshot of Afia Paracha" class="headshot">
+    </div>
 
-        <!-- Image -->
-        <div class="intro-image">
-          <img
-            src="Headshot.jpg"
-            alt="Headshot of Afia Paracha"
-            class="headshot"
-            loading="lazy"
-          >
-        </div>
+    <div class="intro-text">
+      <h1>Hi! I'm Afia.</h1>
+      <h3>Designer and developer. All in one.</h3>
 
-        <!-- Text + Buttons -->
-        <div class="intro-text">
-          <h1>Hi! I'm Afia.</h1>
-          <h3>Designer and developer. All in one.</h3>
-
-          <div class="intro-actions">
-            <a class="btn btn--filled" href="mailto:afiap333@gmail.com">
-              Contact
-            </a>
-            <a
-              class="btn btn--outline"
-              href="resume.html"
-              target="_blank"
-              rel="noopener"
-            >
-              View resume
-            </a>
-          </div>
-        </div>
+      <div class="intro-actions">
+        <a class="btn btn--filled" href="mailto:afiap333@gmail.com">Contact</a>
+        <a class="btn btn--outline" href="resume.html" target="_blank">View resume</a>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section id="project-section">
-        <article class="project-card">
-            <!-- Image -->
-            <div class="project-card-image">
-                <img src="art-library.png" alt="Art Library Screenshot">
-            </div>
 
-            <!-- Text body -->
-            <div class="project-card-body">
-                <h5>Art Library</h5>
-                <p>
-                As testing manager, in addition to developing the Art Library web page, I developed software tests and led beta testing.
-                </p>
-                <a href="project-link.html" class="btn btn--outline">View full page →</a>
-            </div>
-        </article>
+<section id="project-section" class="section section--accent">
+  <div class="content">
 
-        </section>
+    <article class="project-card">
+      <div class="project-card-image">
+        <img src="art-library.png" alt="Art Library Screenshot">
+      </div>
+
+      <div class="project-card-body">
+        <h5>Art Library</h5>
+        <p>
+          As testing manager, in addition to developing the Art Library web page,
+          I developed software tests and led beta testing.
+        </p>
+        <a class="btn btn--outline" href="project-link.html">
+          View full page →
+        </a>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <div class="project-card-image">
+        <img src="art-library.png" alt="Art Library Screenshot">
+      </div>
+
+      <div class="project-card-body">
+        <h5>Art Library</h5>
+        <p>
+          As testing manager, in addition to developing the Art Library web page,
+          I developed software tests and led beta testing.
+        </p>
+        <a class="btn btn--outline" href="project-link.html">
+          View full page →
+        </a>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <div class="project-card-image">
+        <img src="art-library.png" alt="Art Library Screenshot">
+      </div>
+
+      <div class="project-card-body">
+        <h5>Art Library</h5>
+        <p>
+          As testing manager, in addition to developing the Art Library web page,
+          I developed software tests and led beta testing.
+        </p>
+        <a class="btn btn--outline" href="project-link.html">
+          View full page →
+        </a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
 
     <!-- Footer -->
     <footer class="footer">
@@ -117,7 +138,5 @@
         </ul>
        </div>
     </footer>
-
-  </div>
 </body>
 </html>

@@ -44,13 +44,23 @@
   align-items: center;
   padding: var(--nav-padding);
   gap: var(--nav-gap);
-  
+  width: 100%;
+}
+
+/* correct selector for the container that has both .content and .nav-content */
+.content.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: var(--nav-gap);
 }
 
 .navImage img {
   height: 64px;
 }
 
+/* ensure links will sit at the right if layout changes */
 .nav-links {
   list-style: none;
   display: flex;
@@ -83,6 +93,8 @@
   box-shadow: 0px 4px 8px rgba(0,0,0,0.02),
               0px 6px 12px rgba(0,0,0,0.03);
   transition: transform 180ms ease, box-shadow 180ms ease;
+
+  margin: 1rem;
 }
 
 .project-card:hover {

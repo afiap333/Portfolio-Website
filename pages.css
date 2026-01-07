@@ -2,6 +2,15 @@
 .content {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 1rem; /* keep horizontal gutter so content doesn't touch edges */
+}
+
+/* ensure every .section uses the same centered content width */
+.section .content {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 1rem 0; /* vertical spacing inside sections */
 }
 
 #intro .intro-content {
@@ -35,15 +44,20 @@
 
 #project-section{
   background: var(--color-accent);
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding: 1rem;
-  border-radius: 8px;
+  width: 100%;               /* keep background full-bleed */
+  padding: 1rem 0;           /* vertical padding for the section */
+  display: block;            /* content inside controls layout */
 }
 
+/* layout for the constrained inner content of project section */
+#project-section .content{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-start;
+}
 
 /* Responsive */
 @media (max-width: 720px) {

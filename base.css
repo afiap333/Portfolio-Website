@@ -1,3 +1,28 @@
+/* Prevent horizontal scroll / overflow and use predictable box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* prevent accidental horizontal scrollbars (still check elements that use 100vw) */
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* make media scale inside containers */
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 :root {
   /* Base / background */
   --color-bg: #efd5d2;
@@ -25,6 +50,17 @@
   --nav-item-radius: 8px;
   --nav-transition: 160ms ease;
 }
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.content--narrow {
+  max-width: 900px;
+}
+
 
 body {
   margin: 0;
