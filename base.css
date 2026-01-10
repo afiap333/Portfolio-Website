@@ -1,3 +1,4 @@
+/* UPDATED: design refresh — colors, type scale, spacing, skip-link — Jan 2026 */
 /* Prevent horizontal scroll / overflow and use predictable box-sizing */
 *,
 *::before,
@@ -10,7 +11,15 @@ html,
 body {
   overflow-x: hidden;
   width: 100%;
+  height: 100%;
 }
+
+/* Make the page stretch so the footer sits at the bottom when content is short */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+} 
 
 /* make media scale inside containers */
 img,
@@ -25,30 +34,48 @@ svg {
 
 :root {
   /* Base / background */
-  --color-bg: #efd5d2;
-  --color-cards: #2e4052;
+  --color-bg: #fff9f8; /* lighter warm background */
+  --color-surface: #efe0de; /* surfaces/cards */
+  --color-accent: #7e1946; /* primary maroon */
+  --color-cards: #f6e8e7;
 
   /* Text */
-  --color-text-main: #7e1946;
-  --color-text-muted: #efd6d2;
-  --color-accent: #2e4052;
-  --color-border: rgba(46, 64, 82, 0.15);
+  --color-text-main: #3b1020; /* darker for contrast */
+  --color-text-muted: #6c4a4f; /* readable muted */
+  --color-accent-2: #2e4052;
+  --color-border: rgba(46, 64, 82, 0.12);
 
   /* Fonts */
   --font-heading: 'Hedvig Letters Serif', serif;
   --font-body: 'Hedvig Letters Sans', sans-serif;
 
   /* Buttons */
-  --btn-radius: 8px;
-  --btn-padding-y: 0.5rem;
-  --btn-padding-x: 1rem;
-  --btn-transition: 180ms ease;
+  --btn-radius: 10px;
+  --btn-padding-y: 0.6rem;
+  --btn-padding-x: 1.1rem;
+  --btn-transition: 220ms ease;
 
   /* Nav */
-  --nav-padding: 0.5rem 1rem;
-  --nav-gap: 0.5rem;
+  --nav-padding: 0.75rem 1rem;
+  --nav-gap: 0.75rem;
   --nav-item-radius: 8px;
   --nav-transition: 160ms ease;
+
+  /* Spacing & type scale */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+
+  --fs-h1: 3.25rem;
+  --fs-h2: 1.5rem;
+  --fs-h3: 1.125rem;
+
+  /* Glass (backdrop) variables */
+  --glass-bg: rgba(255, 255, 255, 0.65);
+  --glass-bg-strong: rgba(255, 255, 255, 0.78);
+  --glass-border: rgba(255, 255, 255, 0.45);
+  --glass-shadow: 0 8px 30px rgba(46,64,82,0.06);
 }
 
 .content {
@@ -66,17 +93,25 @@ body {
   margin: 0;
   background-color: var(--color-bg);
   font-family: var(--font-body);
+  /* layout helpers for sticky footer */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
+main { flex: 1 0 auto; }
 
 /* Typography */
 h1 {
   font-family: var(--font-heading);
+  font-weight: lighter;
   font-size: 4rem;
   color: var(--color-text-main);
   margin: 0;
 }
 
 h2 {
+  font-weight: lighter;
   font-family: var(--font-heading);
   font-size: 1.5rem;
   color: var(--color-text-main);
@@ -84,6 +119,7 @@ h2 {
 }
 
 h3 {
+  font-weight: lighter;
   font-family: var(--font-body);
   font-size: 1.25rem;
   color: var(--color-accent);
@@ -95,6 +131,7 @@ h3.variant {
 }
 
 p {
+  font-weight: lighter;
   margin: 0;
   color: var(--color-accent);
 }
@@ -102,4 +139,33 @@ p {
 p.light,
 h2.light {
   color: var(--color-text-muted);
+}
+
+/* Accessibility: skip link for keyboard users */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 0.75rem;
+  background: var(--color-accent);
+  color: var(--color-bg);
+  border-radius: 6px;
+  z-index: 1000;
+}
+
+/* Refined typography */
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); }
+
+p { color: var(--color-text-muted); }
 }

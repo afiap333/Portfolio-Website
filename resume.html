@@ -1,188 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="design.css"/>
+    <!-- Site styles + resume overrides -->
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="pages.css">
+    <link rel="stylesheet" href="resume.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Resume</title>
 </head>
 <body>
-<div class="content">
-    <nav class="navigation">
-        <h1 id="logo">Afia Paracha</h1>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <nav class="nav" aria-label="Primary navigation">
+    <div class="content nav-content">
+        <div class="navImage">
+        <img src="AP_Logo.png" alt="AP logo">
+        </div>
+
         <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="resume.html">Resume</a></li>
+        <li><a class="nav-btn" href="index.html" aria-current="page">Home</a></li>
+        <li><a class="nav-btn" href="projects.html">Projects</a></li>
+        <li><a class="nav-btn" href="resume.html" target="_blank">Resume</a></li>
+        <li><a class="nav-btn" href="about.html">About Me</a></li>
         </ul>
+    </div>
     </nav>
-    <div class="box2">
-        <div class="section1">
-                <div class="ImageLeft">
-                    <div class="childImage">
-                        <img src="profile-Pic.png" id="profilePic">
-                    </div>
-                    <div class="captionText">
-                        <h4>Afia Paracha</h4>
-                        <a href=mailto:afiap333@gmail.com><h3>afiap333@gmail.com</h3></a>
-                        <h3>DC Metro Area</h3>
-                    </div>
-                </div>
-                <div class="intro-text">
-                    <div>
-                        <p>As a computer-science undergraduate graduating a year early, I am passionate about both design and programming. I am seeking a full-time opportunity beginning as soon as May 2025. I’m eager to combine my creativity with technical expertise and contribute to innovative projects. </p>
-                    </div>
-                </div>
-        </div>
-            <div class="resume">
-                    <details>
-                        <summary>Education</summary>
-                        <br>
-                        <div class="info"> 
-                            <p><b>University of Virginia</b> <i>Charlottesville, Virginia</i><p>
-                            <div class="year">
-                                <p><b>Bachelor of Arts in Computer Science</b></p> 
-                                <p><i>May 2025</i></p>
-                            </div>
-                            <p><b>Relevant Coursework:</b> Discrete Mathematics and Theory I, Data Structures and Algorithms I, Computer Systems and Organization I & II, 
-                                Human-Computer Interaction, Data Structures and Algorithms II <br> GPA: 3.9</p>
-                                <br>
-                        </div>
-                    </p>
-                    </details>
-                    <details>
-                        <summary>Experience
-                        </summary>
-                        <br>
-                        <div class="info"> 
-                            <p><b>University of Virginia Facilities Management</b> <i>Charlottesville, Virginia</i><p>
-                                <div class="year">
-                                    <p><b>Communications Assistant</b></p> 
-                                    <p><i>November 2022 - Present</i></p>
-                                </div>
-                                <ul class="details">
-                                    <li>Develop engaging and visually appealing social media content for various platforms with consistent branding to grow social media presence</li>
-                                    <li>Design print and digital media using Adobe Illustrator and Adobe Photoshop for events to fit customer/staff needs as part of the User Experience team</li>
-                                    <li>>Compose articles for digital publication for over 1000 members of the Facilities Management staff and general readers</li>
-                                    </ul>
-                            <p><b>Girls Who  Code Summer Immersion Program</b> <i>Virtual</i><p>
-                            <div class="year">
-                                <p><b>Teaching Assistant</b></p> 
-                                <p><i>Summer 2024</i></p>
-                            </div>
-                            <ul class="details">
-                                <li>Supported instructor in maintaining an engaging and accessible virtual classroom environment for a highly diverse group of 60 students worldwide </li>
-                                <li>Taught game development curriculum utilizing p5.js and p5play as well as the Replit IDE</li>
-                                <li>Instructed students in developing and debugging four projects to ensure completion of the program </li>
-                                <li>Provided timely feedback on assignments to 10-15 students in advisory to encourage growth and form connections </li>
-                                </ul>
-                                <br>
-                        </div>
-                        </details>
-                        <details>
-                            <summary>Skills</summary>
-                            <br>
-                            <div class="info">
-                                <ul class="skills">
-                                    <li><b>Design: </b>Proficient in utilizing programs such as Photoshop, Illustrator, Premier Rush, Figma, and Canva. Knowledgeable about UX design cycle, user experience and web design </li>
-                                    <li><b>Programming: </b>Proficient in multiple programming languages, including Java and Python. Understanding of data structure and algorithms. Gaining proficiency in software development techniques, JavaScript, HTML, CSS and React</li>
-                                </ul>
-                            </div>
-                        </details>
-                        <details>
-                            <summary>Extracurricular Activities
-                            </summary>
-                            <br>
-                            <div class="info"> 
-                                <p><b>Girls Who Code Leadership Academy</b></p>
-                                <div class="year">
-                                    <p><b>Fellow</b></p> 
-                                    <p><i>August 2024-Present</i></p>
-                                </div>
-                                <ul class="details">
-                                    <li>Member of the Software Development cohort alongside 30 other students</li>
-                                    <li>Developing a give-back project consisting of an informative website, created using React, focused on overconsumption with a p5.js game embedded within the website </li>
-                                    </ul>
-                                <p><b>University of Virginia Girls Who Code</b></p>
-                                <div class="year">
-                                    <p><b>Vice President</b></p> 
-                                    <p><i>July 2024-Present</i></p>
-                                </div>
-                                <ul class="details">
-                                    <li>Lead executive team along with president to coordinate and run events such as annual hackathon and career fair</li>
-                                    <li>Work to develop engaging curriculum and industry events to engage club members </li>
-                                    </ul>
-                                <p><b>University of Virginia Muslim Institute for Leadership and Empowerement</b></p>
-                                <div class="year">
-                                    <p><b>Co-Director of Recruitment</b></p> 
-                                    <p><i>June 2023-May 2024</i></p>
-                                </div>
-                                <ul class="details">
-                                    <li>Aimed to welcome rising first-year and transfer students of Muslim identity at UVA, recruiting and encouraging participation in the MILE cohort</li>
-                                    <li>Practiced leadership skills acquired as a previous cohort member to guide and mentor new cohort members while fostering a supportive and empowering environment within the MILE cohort </li>
-                                    </ul>
-                                    <br>
-            
-                            </div>
-                            </details>
-                            <details>
-                                <summary>Projects
-                                </summary>
-                                <br>
-                                <div class="info"> 
-                                    <p><b>Waste Wise: A Game and Web Experience on Overconsumption</b></p>
-                                        <div class="year">
-                                            <p><b>Game developmer</b></p> 
-                                            <p><i>August 2024- Present</i></p>
-                                        </div>
-                                        <ul class="details">
-                                            <li>Collaborated with three other members of the Girls Who Code Leadership Academy Cohort</li>
-                                            <li>Designed and programmed an educational website focused on overconsumption utilizing React </li>
-                                            <li>Created a knowledge-based game using p5.js to embed within the website </li>
-                                            </ul>
-                                    <p><b>Hoos Studying</b></p>
-                                    <div class="year">
-                                        <p><b>Project lead</b></p> 
-                                        <p><i>January 2024 - May 2024</i></p>
-                                    </div>
-                                    <ul class="details">
-                                        <li>Demonstrated leadership and management skills by directing a team of 4 other students through the User Experience lifecycle </li>
-                                        <li>Created Hoos Studying, a mobile application to aid students in finding study locations, by working through the contextual analysis 
-                                            and inquiry phases, design, prototyping, and evaluation of the design from users </li>
-                                        </ul>
-                                        <li>Utilized Figma to create a medium fidelity prototype incorporating user needs and client feedback  </li>
-                                        </ul>
-                                        <br>
-                                    <p><b>The Adventures of Cookie</b></p>
-                                        <div class="year">
-                                            <p><b>Co-creator</b></p> 
-                                            <p><i>December 2022</i></p>
-                                        </div>
-                                        <ul class="details">
-                                            <li>Designed a Python game utilizing Pygame and UVA Gamebox directory, specifically built for use in UVA's CS 1111 class</li>
-                                            <li>Developed Python code for essential game components, encompassing player movement, game progression, and win/lose 
-                                                conditions as well as building game screens </li>
-                                            </ul>
-                                </div>
-                                </details>
-                            </div>
+
+    <main id="main" role="main">
+      <div class="content">
+      <section class="resume-container content--narrow">
+        <aside class="resume-sidebar glass--thin">
+          <img src="profile-Pic.png" id="profilePic" alt="Afia profile photo">
+          <h3 class="sidebar-name">Afia Paracha</h3>
+          <a href="mailto:afiap333@gmail.com" class="sidebar-email">afiap333@gmail.com</a>
+          <p class="sidebar-location">DC Metro Area</p>
+
+          <h4>Skills</h4>
+          <ul class="sidebar-skills">
+            <li><strong>Design:</strong> Photoshop, Illustrator, Figma, Canva, UX</li>
+            <li><strong>Programming:</strong> Java, Python, JavaScript, HTML, CSS, React</li>
+          </ul>
+
+          <h4>Contact</h4>
+          <ul class="sidebar-contact">
+            <li><a href="mailto:afiap333@gmail.com">Email</a></li>
+            <li><a href="https://linkedin.com/in/afia-paracha">LinkedIn</a></li>
+            <li><a href="https://github.com/afiap333">GitHub</a></li>
+          </ul>
+
+          <a class="btn btn--outline" href="file:///C:/Users/afiap/OneDrive%20-%20University%20of%20Virginia/AfiaParacha_resume%204.pdf" target="_blank">Download PDF</a>
+        </aside>
+
+        <article class="resume-main glass">
+          <div class="resume-summary">
+            <h2>Summary</h2>
+            <p>Computer-science undergraduate graduating early; designer + developer. Seeking a full-time role beginning May 2025. Passionate about crafting delightful user experiences and building maintainable code.</p>
+          </div>
+
+          <div class="resume-section">
+            <h3>Experience</h3>
+            <div class="job">
+              <h4>Communications Assistant — University of Virginia Facilities Management</h4>
+              <p class="job-meta">Charlottesville, VA • Nov 2022 — Present</p>
+              <ul>
+                <li>Develop social content and design print/digital assets using Adobe CC tools.</li>
+                <li>Wrote articles for intranet reaching 1000+ staff.</li>
+              </ul>
             </div>
-            <div class="download">
-                <a href="file:///C:/Users/afiap/OneDrive%20-%20University%20of%20Virginia/AfiaParacha_resume%204.pdf"><h3><i>Download a PDF of my resume</i></h1></a>
+
+            <div class="job">
+              <h4>Teaching Assistant — Girls Who Code Summer Immersion</h4>
+              <p class="job-meta">Virtual • Summer 2024</p>
+              <ul>
+                <li>Taught game development using p5.js and Replit; supported diverse learners worldwide.</li>
+                <li>Provided feedback and debugging support to student projects.</li>
+              </ul>
             </div>
+          </div>
+
+          <div class="resume-section">
+            <h3>Education</h3>
+            <p><strong>University of Virginia</strong>, Charlottesville — B.A. Computer Science, May 2025 • GPA: 3.9</p>
+            <p><strong>Relevant coursework:</strong> Data Structures, Algorithms, Computer Systems, HCI</p>
+          </div>
+
+          <div class="resume-section">
+            <h3>Projects & Activities</h3>
+            <ul>
+              <li><strong>Waste Wise</strong> — game & web experience (React + p5.js)</li>
+              <li><strong>Hoos Studying</strong> — mobile app prototype (UX lifecycle)</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="content">
+        <div>
+          <h3><i>Let's connect</i></h3>
         </div>
-    </div>
-    <div class="footer">
-        <ul class="footer-links">
-            <li><a href="mailto:afiap333@gmail.com"><img src="gmail-icon.svg" alt="Gmail Icon" id="gmail"></a></li>
-            <li><a href="https://linkedin.com/in/afia-paracha"><img src="linkedin-icon-2.svg" alt="LinkedIn Icon" id="linkedIn"></a></li>
-            <li><a href="https://github.com/afiap333"><img src="github-icon-1.svg" alt="GitHub Icon" id="github"></a></li>
-        </ul>
-    </div>
-</div>
+        <div>
+          <ul class="footer-links">
+            <li><a href="mailto:afiap333@gmail.com"><img src="gmail-icon.svg" alt="Email Afia"></a></li>
+            <li><a href="https://linkedin.com/in/afia-paracha"><img src="linkedin-icon-2.svg" alt="Afia on LinkedIn"></a></li>
+            <li><a href="https://github.com/afiap333"><img src="github-icon-1.svg" alt="Afia on GitHub"></a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
 </body>
 </html>

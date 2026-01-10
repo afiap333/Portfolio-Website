@@ -21,7 +21,8 @@
 </head>
 
 <body>
-    <nav class="nav">
+    <a class="skip-link" href="#intro">Skip to content</a>
+    <nav class="nav" aria-label="Primary navigation">
     <div class="content nav-content">
         <div class="navImage">
         <img src="AP_Logo.png" alt="AP logo">
@@ -36,13 +37,14 @@
     </div>
     </nav>
 
+    <main id="main" role="main">
 <section id="intro" class="section section--light">
   <div class="content intro-content">
     <div class="intro-image">
       <img src="Headshot.jpg" alt="Headshot of Afia Paracha" class="headshot">
     </div>
 
-    <div class="intro-text">
+    <div class="intro-text glass--thin">
       <h1>Hi! I'm Afia.</h1>
       <h3>Designer and developer. All in one.</h3>
 
@@ -56,7 +58,7 @@
 
 
 <section id="project-section" class="section section--accent">
-  <div class="content">
+  <div class="content project-grid">
 
     <article class="project-card">
       <div class="project-card-image">
@@ -69,7 +71,7 @@
           As testing manager, in addition to developing the Art Library web page,
           I developed software tests and led beta testing.
         </p>
-        <a class="btn btn--outline" href="project-link.html">
+        <a class="btn btn--outline" href="project-pages/art-library.html">
           View full page →
         </a>
       </div>
@@ -81,12 +83,11 @@
       </div>
 
       <div class="project-card-body">
-        <h5>Art Library</h5>
+        <h5>Project Two</h5>
         <p>
-          As testing manager, in addition to developing the Art Library web page,
-          I developed software tests and led beta testing.
+          Brief description of the second project — role, tools, and outcome.
         </p>
-        <a class="btn btn--outline" href="project-link.html">
+        <a class="btn btn--outline" href="project-pages/project-two.html">
           View full page →
         </a>
       </div>
@@ -94,16 +95,15 @@
 
     <article class="project-card">
       <div class="project-card-image">
-        <img src="art-library.png" alt="Art Library Screenshot">
+        <img src="project-three.png" alt="Project Three Screenshot">
       </div>
 
       <div class="project-card-body">
-        <h5>Art Library</h5>
+        <h5>Project Three</h5>
         <p>
-          As testing manager, in addition to developing the Art Library web page,
-          I developed software tests and led beta testing.
+          Brief description of the third project — highlight impact and links.
         </p>
-        <a class="btn btn--outline" href="project-link.html">
+        <a class="btn btn--outline" href="project-pages/project-three.html">
           View full page →
         </a>
       </div>
@@ -113,30 +113,22 @@
 </section>
 
 
+    </main>
+
     <!-- Footer -->
     <footer class="footer">
+      <div class="content">
         <div>
-            <p><i>Let's connect</i></p>
+          <h3><i>Let's connect</i></h3>
         </div>
-      <div>
-        <ul class="footer-links">
-            <li>
-            <a href="mailto:afiap333@gmail.com">
-                <img src="gmail-icon.svg" alt="Email Afia">
-            </a>
-            </li>
-            <li>
-            <a href="https://linkedin.com/in/afia-paracha">
-                <img src="linkedin-icon-2.svg" alt="Afia on LinkedIn">
-            </a>
-            </li>
-            <li>
-            <a href="https://github.com/afiap333">
-                <img src="github-icon-1.svg" alt="Afia on GitHub">
-            </a>
-            </li>
-        </ul>
-       </div>
+        <div>
+          <ul class="footer-links">
+            <li><a href="mailto:afiap333@gmail.com"><img src="gmail-icon.svg" alt="Email Afia"></a></li>
+            <li><a href="https://linkedin.com/in/afia-paracha"><img src="linkedin-icon-2.svg" alt="Afia on LinkedIn"></a></li>
+            <li><a href="https://github.com/afiap333"><img src="github-icon-1.svg" alt="Afia on GitHub"></a></li>
+          </ul>
+        </div>
+      </div>
     </footer>
 </body>
 </html>

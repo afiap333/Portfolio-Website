@@ -1,0 +1,103 @@
+/* Resume-specific styles */
+
+:root {
+  --resume-sidebar-width: 300px;
+}
+
+.resume-container {
+  display: grid;
+  grid-template-columns: var(--resume-sidebar-width) 1fr;
+  gap: 2rem;
+  align-items: start;
+  padding: 3rem 0;
+}
+
+.resume-sidebar {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: start;
+}
+
+#profilePic {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.sidebar-name {
+  margin: 0.25rem 0 0;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--color-text-main);
+}
+
+.sidebar-email {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.sidebar-skills, .sidebar-contact {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.resume-main {
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.resume-summary p {
+  margin-top: 0.25rem;
+  color: var(--color-text-muted);
+}
+
+.resume-section {
+  margin-top: 1.25rem;
+}
+
+.resume-section h3 {
+  margin: 0 0 0.5rem 0;
+  color: var(--color-accent-2);
+}
+
+.job h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--color-text-main);
+}
+
+.job-meta {
+  margin: 0.25rem 0 0.75rem 0;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.resume-main ul {
+  margin: 0.25rem 0 0.5rem 1rem;
+}
+
+/* Small screens: single-column stack */
+@media (max-width: 920px) {
+  .resume-container {
+    grid-template-columns: 1fr;
+  }
+  .resume-sidebar {
+    order: 2;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  .resume-main { order: 1; }
+}
+
+/* Print friendly rules */
+@media print {
+  .nav, .footer, .skip-link { display: none !important; }
+  .resume-container { grid-template-columns: 1fr; }
+  .glass, .glass--thin { background: white !important; box-shadow: none !important; backdrop-filter: none !important; }
+}

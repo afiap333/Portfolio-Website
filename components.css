@@ -9,33 +9,40 @@
   text-decoration: none;
   cursor: pointer;
   width: auto;                       /* don’t stretch */
-  transition: all var(--btn-transition);
+  transition: transform var(--btn-transition), box-shadow var(--btn-transition);
+  box-shadow: none;
 }
 
-
 .btn--filled {
-  background-color: var(--color-text-main);
+  background-color: var(--color-accent);
   color: var(--color-bg);
   border: 2px solid transparent;
 }
 
 .btn--filled:hover {
-  background-color: var(--color-accent);
-  color: var(--color-text-muted);
-  transform: translateY(-2px);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(46,64,82,0.08);
 }
 
 .btn--outline {
   background: transparent;
-  border: 2px solid var(--color-text-main);
-  color: var(--color-text-main);
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent);
 }
 
 .btn--outline:hover {
-  background-color: var(--color-text-main);
+  background-color: var(--color-accent);
   color: var(--color-bg);
-  transform: translateY(-2px);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(46,64,82,0.06);
 }
+
+/* focus styles for accessibility */
+.btn:focus-visible {
+  outline: 3px solid rgba(126,25,70,0.15);
+  outline-offset: 2px;
+}
+
 
 /* ===== Navigation ===== */
 .nav {
@@ -83,25 +90,77 @@
   background-color: var(--color-text-main);
   color: var(--color-bg);
 }
+.nav a:focus-visible {
+  box-shadow: 0 0 0 3px rgba(126,25,70,0.12);
+  border-radius: var(--nav-item-radius);
+}
+
+/* ===== Glass utility / glassmorphism style ===== */
+.glass {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: blur(8px) saturate(110%);
+  -webkit-backdrop-filter: blur(8px) saturate(110%);
+  border-radius: 12px;
+}
+
+/* thinner / subtler glass */
+.glass--thin {
+  background: rgba(255,255,255,0.55);
+  border: 1px solid rgba(255,255,255,0.28);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+} 
+
+
+/* Apply glass look to navigation and footer */
+.nav {
+  background: var(--glass-bg);
+  border-bottom: 1px solid var(--glass-border);
+  backdrop-filter: blur(6px) saturate(110%);
+  -webkit-backdrop-filter: blur(6px) saturate(110%);
+}
+
+.footer {
+  background: var(--glass-bg-strong);
+  border-top: 1px solid var(--glass-border);
+  backdrop-filter: blur(6px) saturate(110%);
+  -webkit-backdrop-filter: blur(6px) saturate(110%);
+}
+
+/* Prefer reduced transparency fallback */
+@media (prefers-reduced-transparency: reduce) {
+  .glass, .nav, .footer {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: var(--color-surface);
+    box-shadow: none;
+  }
+} 
+
+
+
 .project-card {
   border-radius: 16px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 400px;
-  box-shadow: 0px 4px 8px rgba(0,0,0,0.02),
-              0px 6px 12px rgba(0,0,0,0.03);
-  transition: transform 180ms ease, box-shadow 180ms ease;
+  max-width: 350px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 12px 30px rgba(46,64,82,0.08);
+  transition: transform 220ms cubic-bezier(.2,.9,.3,1), box-shadow 220ms ease;
 
-  margin: 1rem;
+  margin: 0; /* grid handles spacing */
+  align-self: stretch;
 }
 
 .project-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.08),
-              0px 10px 20px rgba(0,0,0,0.05);
-}
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(46,64,82,0.12);
+} 
 
 /* Image */
 .project-card-image img {
@@ -113,11 +172,15 @@
 
 /* Body */
 .project-card-body {
-  background-color: var(--color-bg); /* #efd6d2 */
+  /* glass surface */
+  background: linear-gradient(180deg, var(--glass-bg) 0%, var(--color-surface) 100%);
+  border: 1px solid var(--glass-border);
   padding: 24px;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  backdrop-filter: blur(6px) saturate(110%);
+  -webkit-backdrop-filter: blur(6px) saturate(110%);
 }
 
 /* Title */
@@ -132,7 +195,7 @@
 .project-card-body p {
   font-family: var(--font-body);
   font-size: 18px;
-  color: var(--color-accent);
+  color: var(--color-text-muted);
   margin: 0;
   line-height: 1.4;
 }
@@ -150,8 +213,13 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
   border-top: 1px solid var(--color-border);
-}
+  flex-shrink: 0;
+  /* subtle divider */
+  box-shadow: inset 0 1px 0 rgba(0,0,0,0.02);
+} 
 
 .footer-links {
   list-style: none;
@@ -176,5 +244,130 @@
 
 .footer-links a:hover {
   background-color: var(--color-text-main);
+}
+
+/* New: project row layout (image left, text right) and alternating backgrounds */
+.project-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 24px;
+  border-radius: 12px;
+  width: 100%;
+  box-sizing: border-box;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 8px 24px rgba(46,64,82,0.06);
+  overflow: hidden;
+} 
+
+/* image column */
+.project-row-image {
+  flex: 0 0 320px; /* fixed-ish image column */
+}
+.project-row-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* text column */
+.project-row-body {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* alternating backgrounds: odd = main bg, even = accent */
+#project-section .content .project-row:nth-child(odd) {
+  background-color: var(--color-bg);
+}
+#project-section .content .project-row:nth-child(even) {
+  background-color: var(--color-accent);
+}
+
+/* ensure text colors have good contrast */
+#project-section .content .project-row h5 {
+  margin: 0;
+  color: var(--color-text-main);
+  font-family: var(--font-heading);
+}
+#project-section .content .project-row p {
+  margin: 0;
+  color: var(--color-text-muted, rgba(0,0,0,0.6));
+  font-family: var(--font-body);
+  line-height: 1.4;
+}
+
+/* If row has accent background, make headings/buttons readable */
+#project-section .content .project-row:nth-child(even) h5,
+#project-section .content .project-row:nth-child(even) .btn {
+  color: var(--color-bg);
+}
+
+/* smaller screens stack image above text */
+@media (max-width: 720px) {
+  .project-row {
+    flex-direction: column;
+    padding: 16px;
+  }
+  .project-row-image {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+
+/* alternating backgrounds for project rows on the Projects page */
+#project-section.projects-page .content .project-row:nth-child(odd) {
+  background-color: var(--color-bg);
+}
+#project-section.projects-page .content .project-row:nth-child(even) {
+  background-color: var(--color-accent);
+}
+
+/* ensure text colors have good contrast on both backgrounds */
+#project-section.projects-page .content .project-row h5 {
+  margin: 0;
+  font-family: var(--font-heading);
+  color: var(--color-text-main);
+}
+#project-section.projects-page .content .project-row p {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+/* when a row has the accent background, make headings/buttons readable */
+#project-section.projects-page .content .project-row:nth-child(even) h5,
+#project-section.projects-page .content .project-row:nth-child(even) .btn {
+  color: var(--color-bg);
+}
+
+/* responsive: stack image above text on small screens */
+@media (max-width: 720px) {
+  #project-section.projects-page .content .project-row {
+    flex-direction: column;
+    padding: 16px;
+  }
+  #project-section.projects-page .content .project-row-image {
+    width: 100%;
+    flex: 0 0 auto;
+  }
+  #project-section.projects-page .content .project-row-image img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Make project rows on the Projects page taller and increase image height */
+#project-section.projects-page .content .project-row {
+  padding: 28px;
+  border-radius: 12px;
+}
+#project-section.projects-page .content .project-row-image img {
+  height: 320px;
+  object-fit: cover;
 }
 
